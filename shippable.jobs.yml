@@ -3,28 +3,23 @@ jobs:
 #  - name: box-ci
 #    type: runCI
 #    steps:
-#      - GET: box-repo
-#      - PUT: box-img
+#      - IN: box-repo
+#      - IN: box-img
 
-# manifest gen for BOX
-  - name: box-man
-    type: manifest
-    steps:
-      - GET: box-img
-      - GET: box-img-opts
-
-# TEST deployment for BOX
-  - name: box-test-aws
-    type: ecsDeploy
-    steps:
-      - GET: box-man
-      - GET: box-t-params
-      - GET: env-test-aws
-
-
-
-
-
+## manifest gen for BOX
+#  - name: box-man
+#    type: manifest
+#    steps:
+#      - IN: box-img
+#      - IN: box-img-opts
+#
+## TEST deployment for BOX
+#  - name: box-test-aws
+#    type: ecsDeploy
+#    steps:
+#      - IN: box-man
+#      - IN: box-t-params
+#      - IN: env-test-aws
 
 
 # VISUALIZER CODE
@@ -33,20 +28,20 @@ jobs:
 #  - name: dv-ci
 #    type: runCI
 #    steps:
-#      - GET: dv-repo
-#      - PUT: dv-img
+#      - IN: dv-repo
+#      - OUT: dv-img
 #
 ## manifest gen for VISUALIZER
 #  - name: dv-man
 #    type: manifest
 #    steps:
-#      - GET: dv-img
-#      - GET: dv-img-opts
+#      - IN: dv-img
+#      - IN: dv-img-opts
 #
 ## TEST deployment for VISUALIZER
 #  - name: dv-test
 #    type: ecsDeploy
 #    steps:
-#      - GET: dv-man
-#      - GET: dv-params
-#      - GET: env-test-aws
+#      - IN: dv-man
+#      - IN: dv-params
+#      - IN: env-test-aws
