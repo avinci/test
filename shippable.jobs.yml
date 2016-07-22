@@ -32,12 +32,12 @@ jobs:
       - OUT: dv-img
 
 ## manifest gen for VISUALIZER
-#  - name: dv-man
-#    type: manifest
-#    steps:
-#      - IN: dv-img
-#      - IN: dv-img-opts
-#
+  - name: dv-man
+    type: manifest
+    steps:
+      - IN: dv-img
+      - IN: dv-img-opts
+
 ## TEST deployment for VISUALIZER
 #  - name: dv-test
 #    type: ecsDeploy
