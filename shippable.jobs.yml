@@ -6,21 +6,20 @@ jobs:
 #      - IN: box-repo
 #      - IN: box-img
 
-## manifest gen for BOX
-#  - name: box-man
-#    type: manifest
-#    steps:
-#      - IN: box-img
-#      - IN: box-img-opts
-#
-## TEST deployment for BOX
-#  - name: box-test-aws
-#    type: ecsDeploy
-#    steps:
-#      - IN: box-man
-#      - IN: box-t-params
-#      - IN: env-test-aws
+# manifest gen for BOX
+  - name: box-man
+    type: manifest
+    steps:
+      - IN: box-img
+      - IN: box-img-opts
 
+# TEST deployment for BOX
+  - name: box-test-aws
+    type: ecsDeploy
+    steps:
+      - IN: box-man
+      - IN: box-t-params
+      - IN: env-test-aws
 
 # VISUALIZER CODE
 
