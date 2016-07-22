@@ -43,6 +43,12 @@ resources:
       memory: 64
       cpuShares: 512
 
+# box version seed
+  - name: box-ver
+    type: version
+    seed:
+      versionName: "0.0.1"
+
 # PROD REPO for CONFIG
 
 ## REPO for PROD configs
