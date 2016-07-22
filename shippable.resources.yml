@@ -30,7 +30,7 @@ resources:
 
 # TEST AWS cluster
   - name: env-test-aws
-    type: ecsCluster
+    type: cluster
     integration: avi-ecs
     pointer:
       sourceName : "test-aws"
