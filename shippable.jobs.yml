@@ -30,18 +30,18 @@ jobs:
 #    steps:
 #      - IN: dv-repo
 #      - OUT: dv-img
-#
-### manifest gen for VISUALIZER
-#  - name: dv-man
-#    type: manifest
-#    steps:
-#      - IN: dv-img
-#      - IN: dv-img-opts
 
-## TEST deployment for VISUALIZER
-#  - name: dv-test
-#    type: ecsDeploy
-#    steps:
-#      - IN: dv-man
-#      - IN: dv-params
-#      - IN: env-test-aws
+# manifest gen for VISUALIZER
+  - name: dv-man
+    type: manifest
+    steps:
+      - IN: dv-img
+      - IN: dv-img-opts
+
+# TEST deployment for VISUALIZER
+  - name: dv-test
+    type: ecsDeploy
+    steps:
+      - IN: dv-man
+      - IN: dv-params
+      - IN: env-test-aws
