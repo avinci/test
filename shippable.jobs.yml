@@ -40,9 +40,10 @@ jobs:
       - TASK: managed
 
 # TEST deployment for VISUALIZER
-#  - name: dv-test
-#    type: ecsDeploy
-#    steps:
-#      - IN: dv-man
-#      - IN: dv-params
-#      - IN: env-test-aws
+  - name: dv-test
+    type: ecsDeploy
+    steps:
+      - IN: dv-man
+      - IN: dv-params
+      - IN: env-test-aws
+      - TASK: managed
