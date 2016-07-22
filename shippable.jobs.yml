@@ -39,9 +39,9 @@ jobs:
       - IN: dv-img-opts
 
 # TEST deployment for VISUALIZER
-  - name: dv-test
-    type: ecsDeploy
-    steps:
-      - IN: dv-man
-      - IN: dv-params
-      - IN: env-test-aws
+#  - name: dv-test
+#    type: ecsDeploy
+#    steps:
+#      - IN: dv-man
+#      - IN: dv-params
+#      - IN: env-test-aws
