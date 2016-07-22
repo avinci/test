@@ -71,7 +71,7 @@ resources:
     pointer:
       sourceName: "avinci/dv"
     seed:
-      versionName: "master.6"
+      versionName: "master.7"
 
 # Docker Image Options for VISUALIZER
   - name: dv-img-opts
