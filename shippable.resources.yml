@@ -47,7 +47,7 @@ resources:
   - name: box-ver
     type: version
     seed:
-      versionName: "0.0.1"
+      versionName: "0.1.0"
 
 # PROD REPO for CONFIG
 

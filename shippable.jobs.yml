@@ -14,7 +14,6 @@ jobs:
       - IN: box-img-opts
       - TASK: managed
 
-
 # TEST deployment for BOX
   - name: box-test-aws
     type: ecsDeploy
@@ -23,6 +22,14 @@ jobs:
       - IN: box-t-params
       - IN: env-test-aws
       - TASK: managed
+
+  - name: box-rel
+    type: release
+    steps:
+      - IN: box-ver
+      - IN: box-test-aws
+      - TASK: managed
+        bump: minor
 
 # VISUALIZER CODE
 
