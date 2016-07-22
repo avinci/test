@@ -27,7 +27,7 @@ resources:
 #        DB_USERNAME: "ayeaye"
 #        DB_PASSWORD: "ayeaye"
 #        ENVIRONMENT: "test-aws"
-#
+
 # TEST AWS cluster
   - name: env-test-aws
     type: ecsCluster
