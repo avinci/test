@@ -28,6 +28,7 @@ jobs:
     steps:
       - IN: box-ver
       - IN: box-test-aws
+        trigger: false
       - TASK: managed
         bump: minor
 
