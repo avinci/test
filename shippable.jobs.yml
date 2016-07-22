@@ -36,7 +36,9 @@ jobs:
     type: manifest
     steps:
       - IN: dv-img
+        pull: false
       - IN: dv-img-opts
+      - TASK: managed
 
 # TEST deployment for VISUALIZER
 #  - name: dv-test
