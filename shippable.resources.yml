@@ -65,27 +65,27 @@ resources:
 #      sourceName: avinci/dv
 #      branch: master
 
-# Docker Image for VISUALIZER
-  - name: dv-img
-    type: image
-    integration: avinci-dh
-    pointer:
-      sourceName: "avinci/dv"
-    seed:
-      versionName: "master.6"
-
-# Docker Image Options for VISUALIZER
-  - name: dv-img-opts
-    type: dockerOptions
-    version:
-      memory: 64
-      cpuShares: 256
-      portMappings:
-        - 80:80
-
-# env vars for VISUALIZER
-  - name: dv-params
-    type: params
-    version:
-      params:
-        MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
+## Docker Image for VISUALIZER
+#  - name: dv-img
+#    type: image
+#    integration: avinci-dh
+#    pointer:
+#      sourceName: "avinci/dv"
+#    seed:
+#      versionName: "master.6"
+#
+## Docker Image Options for VISUALIZER
+#  - name: dv-img-opts
+#    type: dockerOptions
+#    version:
+#      memory: 64
+#      cpuShares: 256
+#      portMappings:
+#        - 80:80
+#
+## env vars for VISUALIZER
+#  - name: dv-params
+#    type: params
+#    version:
+#      params:
+#        MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
