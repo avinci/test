@@ -12,6 +12,8 @@ jobs:
     steps:
       - IN: box-img
       - IN: box-img-opts
+      - TASK: managed
+
 
 # TEST deployment for BOX
   - name: box-test-aws
@@ -20,6 +22,7 @@ jobs:
       - IN: box-man
       - IN: box-t-params
       - IN: env-test-aws
+      - TASK: managed
 
 # VISUALIZER CODE
 
