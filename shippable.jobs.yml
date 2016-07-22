@@ -24,13 +24,13 @@ jobs:
 
 # VISUALIZER CODE
 
-## CI for VISUALIZER
-#  - name: dv-ci
-#    type: runCI
-#    steps:
-#      - IN: dv-repo
-#      - OUT: dv-img
-#
+# CI for VISUALIZER
+  - name: dv-ci
+    type: runCI
+    steps:
+      - IN: dv-repo
+      - OUT: dv-img
+
 ## manifest gen for VISUALIZER
 #  - name: dv-man
 #    type: manifest
