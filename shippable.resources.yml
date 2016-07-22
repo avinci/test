@@ -57,12 +57,12 @@ resources:
 # VISUALIZER CODE
 
 # REPO of VISUALIZER code
-  - name: dv-repo
-    type: gitRepo
-    integration: "avinci-gh"
-    pointer:
-      sourceName: avinci/dv
-      branch: master
+#  - name: dv-repo
+#    type: gitRepo
+#    integration: "avinci-gh"
+#    pointer:
+#      sourceName: "avinci/dv"
+#      branch: master
 
 # Docker Image for VISUALIZER
   - name: dv-img
