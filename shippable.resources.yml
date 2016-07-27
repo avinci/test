@@ -1,11 +1,11 @@
 resources:
 # REPO of BOX code
-#  - name: box-repo
-#    type: gitRepo
-#    integration: "avinci-gh"
-#    pointer:
-#      sourceName: avinci/box
-#      branch: master
+  - name: box-repo
+    type: gitRepo
+    integration: "avinci-gh"
+    pointer:
+      sourceName: avinci/box
+      branch: master
 
 # Docker Image for BOX
   - name: box-img

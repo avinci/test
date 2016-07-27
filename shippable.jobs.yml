@@ -1,10 +1,10 @@
 jobs:
-## CI for BOX
-#  - name: box-ci
-#    type: runCI
-#    steps:
-#      - IN: box-repo
-#      - IN: box-img
+# CI for BOX
+  - name: box-ci
+    type: runCI
+    steps:
+      - IN: box-repo
+      - IN: box-img
 
 # manifest gen for BOX
   - name: box-man
