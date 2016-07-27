@@ -4,6 +4,7 @@ jobs:
     type: runCI
     steps:
       - IN: box-repo
+      - TASK: managed
       - OUT: box-img
 
 # manifest gen for BOX
