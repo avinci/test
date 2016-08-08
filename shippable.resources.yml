@@ -44,6 +44,14 @@ resources:
         MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
 
 
+# TEST AWS cluster
+  - name: env-test-aws
+    type: cluster
+    integration: avi-ecs
+    pointer:
+      sourceName : "test-aws"
+      region: "us-east-1"
+
 # BOX PIPELINE CODE
 
 # REPO of BOX code
@@ -74,14 +82,6 @@ resources:
         DB_USERNAME: "ayeaye"
         DB_PASSWORD: "ayeaye"
         ENVIRONMENT: "test-aws"
-
-# TEST AWS cluster
-  - name: env-test-aws
-    type: cluster
-    integration: avi-ecs
-    pointer:
-      sourceName : "test-aws"
-      region: "us-east-1"
 
 # Docker Image Options for BOX
   - name: box-img-opts
