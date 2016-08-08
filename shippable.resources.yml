@@ -47,7 +47,7 @@ resources:
 # TEST AWS cluster
   - name: env-test-aws
     type: cluster
-    integration: aviB-ecs
+    integration: avi-ecs
     pointer:
       sourceName : "test-aws"
       region: "us-east-1"
