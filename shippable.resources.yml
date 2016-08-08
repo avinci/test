@@ -44,25 +44,25 @@ resources:
         MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
 
 
-## BOX PIPELINE CODE
-#
-## REPO of BOX code
-#  - name: box-repo
-#    type: gitRepo
-#    integration: "avinci-gh"
-#    pointer:
-#      sourceName: avinci/box
-#      branch: master
-#
-## Docker Image for BOX
-#  - name: box-img
-#    type: image
-#    integration: avinci-dh
-#    pointer:
-#      sourceName: "avinci/box"
-#    seed:
-#      versionName: "master.5"
-#
+# BOX PIPELINE CODE
+
+# REPO of BOX code
+  - name: box-repo
+    type: gitRepo
+    integration: "avinci-gh"
+    pointer:
+      sourceName: avinci/box
+      branch: master
+
+# Docker Image for BOX
+  - name: box-img
+    type: image
+    integration: avinci-dh
+    pointer:
+      sourceName: "avinci/box"
+    seed:
+      versionName: "master.5"
+
 ## TEST env vars for BOX
 #  - name: box-t-params
 #    type: params

@@ -33,14 +33,24 @@ jobs:
 #      - IN: env-test-aws
 #      - TASK: managed
 #
-## CI for BOX
-#  - name: box-ci
-#    type: runCI
-#    steps:
-#      - IN: box-repo
-#      - TASK: managed
-#      - OUT: box-img
-#
+
+# BOX PIPELINE JOBS
+
+# CI for BOX
+  - name: box-ci
+    type: runSh
+    steps:
+      - IN: box-repo
+      - IN: docker-creds
+      - TASK:
+        - script: sudo apt-get install -y jq
+        - script: ./IN/box-repo/box-repo/build.sh
+      - OUT: box-img
+    on_success:
+      - echo 'on success !!!!!'
+    on_failure:
+      - echo 'Failed job .... :('
+
 ## manifest gen for BOX
 #  - name: box-man
 #    type: manifest
