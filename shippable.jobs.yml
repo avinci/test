@@ -50,27 +50,27 @@ jobs:
     on_failure:
       - script: echo 'Failed job .... :('
 
-## manifest gen for BOX
-#  - name: box-man
-#    type: manifest
-#    steps:
-#      - IN: box-img
-#      - IN: box-img-opts
-#
-## TEST deployment for BOX
-#  - name: box-test-aws
-#    type: ecsDeploy
-#    steps:
-#      - IN: box-man
-#      - IN: box-t-params
-#      - IN: env-test-aws
-#
-#  - name: box-rel
-#    type: release
-#    steps:
-#      - IN: box-ver
-#      - IN: box-test-aws
-#        trigger: false
-#      - TASK: managed
-#        bump: minor
+# manifest gen for BOX
+  - name: box-man
+    type: manifest
+    steps:
+      - IN: box-img
+      - IN: box-img-opts
+
+# TEST deployment for BOX
+  - name: box-test-aws
+    type: ecsDeploy
+    steps:
+      - IN: box-man
+      - IN: box-t-params
+      - IN: env-test-aws
+
+  - name: box-rel
+    type: release
+    steps:
+      - IN: box-ver
+      - IN: box-test-aws
+        trigger: false
+      - TASK: managed
+        bump: minor
 

@@ -90,8 +90,8 @@ resources:
       memory: 64
       cpuShares: 512
 
-## box version seed
-#  - name: box-ver
-#    type: version
-#    seed:
-#      versionName: "0.1.0"
+# box version seed
+  - name: box-ver
+    type: version
+    seed:
+      versionName: "0.1.0"
