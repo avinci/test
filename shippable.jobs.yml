@@ -23,15 +23,15 @@ jobs:
       - IN: dv-img
       - IN: dv-img-opts
 
-## TEST deployment for VISUALIZER
-#  - name: dv-test
-#    type: ecsDeploy
-#    steps:
-#      - IN: dv-man
-#      - IN: dv-params
-#      - IN: env-test-aws
-#      - TASK: managed
-#
+# TEST deployment for VISUALIZER
+  - name: dv-test
+    type: deploy
+    steps:
+      - IN: dv-man
+      - IN: dv-params
+      - IN: env-test-aws
+      - TASK: managed
+
 
 # BOX PIPELINE JOBS
 
@@ -59,7 +59,7 @@ jobs:
 
 # TEST deployment for BOX
   - name: box-test-aws
-    type: ecsDeploy
+    type: deploy
     steps:
       - IN: box-man
       - IN: box-t-params
