@@ -63,35 +63,35 @@ resources:
     seed:
       versionName: "master.5"
 
-## TEST env vars for BOX
-#  - name: box-t-params
-#    type: params
-#    version:
-#      params:
-#        DB_HOST: "ds015700.mlab.com"
-#        DB_NAME: "ayeaye"
-#        DB_PORT: "15700"
-#        DB_USERNAME: "ayeaye"
-#        DB_PASSWORD: "ayeaye"
-#        ENVIRONMENT: "test-aws"
-#
-## TEST AWS cluster
-#  - name: env-test-aws
-#    type: cluster
-#    integration: avi-ecs
-#    pointer:
-#      sourceName : "test-aws"
-#      region: "us-east-1"
-#
-## Docker Image Options for BOX
-#  - name: box-img-opts
-#    type: dockerOptions
-#    version:
-#      memory: 64
-#      cpuShares: 512
-#
-## box version seed
-#  - name: box-ver
-#    type: version
-#    seed:
-#      versionName: "0.1.0"
+# TEST env vars for BOX
+  - name: box-t-params
+    type: params
+    version:
+      params:
+        DB_HOST: "ds015700.mlab.com"
+        DB_NAME: "ayeaye"
+        DB_PORT: "15700"
+        DB_USERNAME: "ayeaye"
+        DB_PASSWORD: "ayeaye"
+        ENVIRONMENT: "test-aws"
+
+# TEST AWS cluster
+  - name: env-test-aws
+    type: cluster
+    integration: avi-ecs
+    pointer:
+      sourceName : "test-aws"
+      region: "us-east-1"
+
+# Docker Image Options for BOX
+  - name: box-img-opts
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 512
+
+# box version seed
+  - name: box-ver
+    type: version
+    seed:
+      versionName: "0.1.0"
