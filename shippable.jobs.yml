@@ -17,14 +17,13 @@ jobs:
       - echo 'Failed job .... :('
 
 
-## manifest gen for VISUALIZER
-#  - name: dv-man
-#    type: manifest
-#    steps:
-#      - IN: dv-img
-#      - IN: dv-img-opts
-#      - TASK: managed
-#
+# manifest gen for VISUALIZER
+  - name: dv-man
+    type: manifest
+    steps:
+      - IN: dv-img
+      - IN: dv-img-opts
+
 ## TEST deployment for VISUALIZER
 #  - name: dv-test
 #    type: ecsDeploy
