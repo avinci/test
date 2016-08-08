@@ -9,6 +9,7 @@ jobs:
       - IN: docker-creds
       - TASK:
         - script: sudo apt-get install -y jq
+        - script: ls -al ./IN
         - script: ./IN/dv-repo/gitRepo/build.sh
       - OUT: dv-img
     on_success:
