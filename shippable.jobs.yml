@@ -10,6 +10,8 @@ jobs:
       - TASK:
         - script: sudo apt-get install -y jq
         - script: ls -al ./IN
+        - script: ls -al ./dv-repo
+        - script: ls -al ./IN/dv-repo/gitRepo
         - script: ./IN/dv-repo/gitRepo/build.sh
       - OUT: dv-img
     on_success:
