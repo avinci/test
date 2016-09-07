@@ -3,6 +3,7 @@ jobs:
   - name: infra-prov
     type: runSh
     steps:
+      - IN: trigger-demoInfra-prov
       - IN: aws-demo-pem
       - IN: aws-demo-creds
       - IN: demo-infra-repo
@@ -84,8 +85,8 @@ jobs:
     type: release
     steps:
       - IN: box-ver
+      - IN: trigger-release
       - IN: box-test-aws
         trigger: false
       - TASK: managed
         bump: minor
-
