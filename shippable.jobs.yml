@@ -4,6 +4,7 @@ jobs:
     type: runSh
     steps:
       - IN: aws-demo-pem
+      - IN: aws-demo-creds
       - IN: demo-infra-repo
       - TASK:
         - script: sudo apt-get install -y jq
