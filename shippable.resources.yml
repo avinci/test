@@ -57,8 +57,8 @@ resources:
     type: params
     version:
       params:
-        MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
-        #secure: HQnPf+sjQoizngxyZCtL0Ei74MF6BnkCN1xkWozOyZve1Z0o+hVsJD3JF1ALC7O0A0couXElWej29CJyeaUCnRZu4X3Xm1hMowAtt/E5nFSNdn3LlUPqUrUzvap22H/uJM4Vi5qwjn6InGEAO5L6hXO1une19mgV7LoYG49DvNYYPxLAJ11Syg8kNznGekKn7nimsCM7f5HzKVx3HZyUCFFzdqvl5IHzjvv6mdvrRNgPCO3jMhKTxaLhvvCQKG/EHGyQT+UY0WFZO5D1oCWD7PGv6fXUDSQZNjj6cL6vU+xSPfZCxj3ZL6jvYx1cDU6wSSb9Q6ad7tJYutMDb18aEw==  #MONGO_API_URL
+        #MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
+        secure: eY9ytiMduMLdzSIrvQ3Tg0nZNLaFjIU4qiwV0nSI+oxNV71HQjvFC5+h9RI/aQdFhX4zVXh8XLbqQNz9vFmSd+qBBaIxepJhxK1In+zbG5VHnw31dFg8Xvk2qdA1G6ojF3ar4nHmzt44DsUfT+gboKrLz7YgHGOpbF2qOKbKLjnK9jNRtGZ9PajciHToh4Vhq/i+bI786do2NKkz25ezghyv0BYPovAGsX/jcp1kGfn11RaI8t5uHuNCjAprYc639I7mBls5gyPbvnb4djWNanj4Of4e5kxIqh1MBV4i8aW6/G9CZHFjg+ebQAqTUrCV0smBTEMBwoRIxXuko78nIQ== #MONGO_API_URL
 
 # TEST AWS cluster
   - name: env-test-aws
@@ -96,10 +96,8 @@ resources:
         DB_NAME: "ayeaye"
         DB_PORT: "15700"
         DB_USERNAME: "ayeaye"
-        #DB_PASSWORD: "ayeaye"
         ENVIRONMENT: "test-aws"
-        #secure: UZtHnLlUEMQw4qJdFu5f9D0TaYv1pYT1aMjeph8CqQh4WOHO2diF72ZNzR3pTs73hW5KRsMTas1Cwkkgv6HGY9fCgFPApzxyXQ0GlBH9EkitcdhtAs993K/OF/wDMSUfqdTHkGIlGuXexEu35rNnk76xLIuymdxhajD/7Jda6tQJRYD+cSlfdiO0HzTWO/M/z0PZTioACzAicTWhbhzHm3Td+ApbP6R9J4Sz6izi66vhjUSm887XjWImr1LHEPzHxTJbTxPSAmysoP5AO9U/pzu2izI33SBTq64An+eCVmSe5F5EKa2UPr1M/HNN+j8KX1/6hCYLwmg9Zw5doOf0FA== #DB_PASSWORD
-        secure: rI62jh+LuVN5ArirEWv4dhfWw8Fv4j8Ptk5ksLTKyp78+nbYV//ViSDdQy+LDCfVCJbaXCXj0LAvN61BQFn0fM3RjRw/IPYnBaG+reYmaZ47Kfbw+02yGTI77Mglo/AM3Q43wz6bcBiHqeSqmvvSEPjfFL9zHLqU44cljW0NDlf0z9T/WcQeG2R8byfSpR95/9iAJz5GTEMS9FQlmg85Q7cIA1G6WpTpV04R0PHSKnjI8iFJqja68NGlkdCihxLFQAAYiYXY6rrN0AMXIL37GtSksBkY+tCnJ0HfB4db7go2n5IGL+hIug2C/4yh4R7RIFEz+mBbO7/nTo0FZ++rkQ==
+        secure: rI62jh+LuVN5ArirEWv4dhfWw8Fv4j8Ptk5ksLTKyp78+nbYV//ViSDdQy+LDCfVCJbaXCXj0LAvN61BQFn0fM3RjRw/IPYnBaG+reYmaZ47Kfbw+02yGTI77Mglo/AM3Q43wz6bcBiHqeSqmvvSEPjfFL9zHLqU44cljW0NDlf0z9T/WcQeG2R8byfSpR95/9iAJz5GTEMS9FQlmg85Q7cIA1G6WpTpV04R0PHSKnjI8iFJqja68NGlkdCihxLFQAAYiYXY6rrN0AMXIL37GtSksBkY+tCnJ0HfB4db7go2n5IGL+hIug2C/4yh4R7RIFEz+mBbO7/nTo0FZ++rkQ== #DB_PASSWORD
 
 # Docker Image Options for BOX
   - name: box-img-opts
