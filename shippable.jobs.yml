@@ -1,6 +1,20 @@
 jobs:
-## VISUALIZER PIPELINE JOBS
-#
+# VISUALIZER PIPELINE JOBS
+
+# CI for VISUALIZER
+  - name: infra-prov
+    type: runSh
+    steps:
+      - IN: aws-demo-pem
+      - TASK:
+        - script: sudo apt-get install -y jq
+        - script: ls -al ./IN
+        - script: ls -al ./aws-demo-pem
+    on_success:
+      - script: echo 'on success !!!!!'
+    on_failure:
+      - script: echo 'Failed job .... :('
+
 ## CI for VISUALIZER
 #  - name: dv-ci
 #    type: runSh

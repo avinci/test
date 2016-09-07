@@ -1,6 +1,12 @@
 resources:
-## VISUALIZER PIPELINE CODE
-#
+# VISUALIZER PIPELINE CODE
+
+# PEM key for AWS demo account
+  - name: aws-demo-pem
+    type: integration
+    integration: avi-demo-pem
+
+
 ## REPO of VISUALIZER
 #  - name: dv-repo
 #    type: gitRepo
