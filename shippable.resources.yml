@@ -21,57 +21,52 @@ resources:
 
 # VISUALIZER PIPELINE CODE
 
-## REPO of VISUALIZER
-#  - name: dv-repo
-#    type: gitRepo
-#    integration: "avinci-gh"
-#    pointer:
-#      sourceName: "avinci/dv"
-#      branch: master
-#
-## CREDS for DOCKER HUB
-#  - name: docker-creds
-#    type: image
-#    integration: avinci-dh
-#    pointer:
-#      sourceName: "library/nginx"
-#    seed:
-#      versionName: latest
-#
-## Docker Image for VISUALIZER
-#  - name: dv-img
-#    type: image
-#    integration: avinci-dh
-#    pointer:
-#      sourceName: "avinci/dv"
-#    seed:
-#      versionName: "master.7"
-#
-## Docker Image Options for VISUALIZER
-#  - name: dv-img-opts
-#    type: dockerOptions
-#    version:
-#      memory: 64
-#      cpuShares: 256
-#      portMappings:
-#        - 80:80
-#
-## env vars for VISUALIZER
-#  - name: dv-params
-#    type: params
-#    version:
-#      params:
-#        MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
-#
-#
-## TEST AWS cluster
-#  - name: env-test-aws
-#    type: cluster
-#    integration: avi-ecs
-#    pointer:
-#      sourceName : "test-aws"
-#      region: "us-east-1"
-#
+# CREDS for DOCKER HUB
+  - name: docker-creds
+    type: integration
+    integration: avinci-dh
+
+# REPO of VISUALIZER
+  - name: dv-repo
+    type: gitRepo
+    integration: "avinci-gh"
+    pointer:
+      sourceName: "avinci/dv"
+      branch: master
+
+# Docker Image for VISUALIZER
+  - name: dv-img
+    type: image
+    integration: avinci-dh
+    pointer:
+      sourceName: "avinci/dv"
+    seed:
+      versionName: "master.7"
+
+# Docker Image Options for VISUALIZER
+  - name: dv-img-opts
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 256
+      portMappings:
+        - 80:80
+
+# env vars for VISUALIZER
+  - name: dv-params
+    type: params
+    version:
+      params:
+        secure: HQnPf+sjQoizngxyZCtL0Ei74MF6BnkCN1xkWozOyZve1Z0o+hVsJD3JF1ALC7O0A0couXElWej29CJyeaUCnRZu4X3Xm1hMowAtt/E5nFSNdn3LlUPqUrUzvap22H/uJM4Vi5qwjn6InGEAO5L6hXO1une19mgV7LoYG49DvNYYPxLAJ11Syg8kNznGekKn7nimsCM7f5HzKVx3HZyUCFFzdqvl5IHzjvv6mdvrRNgPCO3jMhKTxaLhvvCQKG/EHGyQT+UY0WFZO5D1oCWD7PGv6fXUDSQZNjj6cL6vU+xSPfZCxj3ZL6jvYx1cDU6wSSb9Q6ad7tJYutMDb18aEw==  #MONGO_API_URL
+
+# TEST AWS cluster
+  - name: env-test-aws
+    type: cluster
+    integration: avi-ecs
+    pointer:
+      sourceName : "test-aws"
+      region: "us-east-1"
+
 ## BOX PIPELINE CODE
 #
 ## REPO of BOX code
