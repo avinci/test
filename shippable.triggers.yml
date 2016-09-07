@@ -1,0 +1,5 @@
+triggers:
+   - name: trigger-demoInfra-prov
+     type: trigger
+     version:
+       counter: 3

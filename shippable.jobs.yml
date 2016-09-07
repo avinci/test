@@ -7,8 +7,7 @@ jobs:
       - IN: demo-infra-repo
       - TASK:
         - script: sudo apt-get install -y jq
-        - script: ls -al ./IN
-        - script: cat ./IN/aws-demo-pem/integration.env
+        - script: IN/demo-infra-repo/gitRepo/build.sh
     on_success:
       - script: echo 'on success !!!!!'
     on_failure:

@@ -6,6 +6,11 @@ resources:
     type: integration
     integration: avi-demo-pem
 
+# CREDS for AWS demo account
+  - name: aws-demo-creds
+    type: integration
+    integration: avi-ecs
+
 # REPO of AWS demo Infra
   - name: demo-infra-repo
     type: gitRepo
