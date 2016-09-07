@@ -57,7 +57,6 @@ resources:
     type: params
     version:
       params:
-        #MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
         secure: eY9ytiMduMLdzSIrvQ3Tg0nZNLaFjIU4qiwV0nSI+oxNV71HQjvFC5+h9RI/aQdFhX4zVXh8XLbqQNz9vFmSd+qBBaIxepJhxK1In+zbG5VHnw31dFg8Xvk2qdA1G6ojF3ar4nHmzt44DsUfT+gboKrLz7YgHGOpbF2qOKbKLjnK9jNRtGZ9PajciHToh4Vhq/i+bI786do2NKkz25ezghyv0BYPovAGsX/jcp1kGfn11RaI8t5uHuNCjAprYc639I7mBls5gyPbvnb4djWNanj4Of4e5kxIqh1MBV4i8aW6/G9CZHFjg+ebQAqTUrCV0smBTEMBwoRIxXuko78nIQ== #MONGO_API_URL
 
 # TEST AWS cluster
