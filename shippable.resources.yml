@@ -57,16 +57,17 @@ resources:
     type: params
     version:
       params:
-        secure: HQnPf+sjQoizngxyZCtL0Ei74MF6BnkCN1xkWozOyZve1Z0o+hVsJD3JF1ALC7O0A0couXElWej29CJyeaUCnRZu4X3Xm1hMowAtt/E5nFSNdn3LlUPqUrUzvap22H/uJM4Vi5qwjn6InGEAO5L6hXO1une19mgV7LoYG49DvNYYPxLAJ11Syg8kNznGekKn7nimsCM7f5HzKVx3HZyUCFFzdqvl5IHzjvv6mdvrRNgPCO3jMhKTxaLhvvCQKG/EHGyQT+UY0WFZO5D1oCWD7PGv6fXUDSQZNjj6cL6vU+xSPfZCxj3ZL6jvYx1cDU6wSSb9Q6ad7tJYutMDb18aEw==  #MONGO_API_URL
+        MONGO_API_URL: "https://api.mlab.com/api/1/databases/ayeaye/collections/boxes?apiKey=9hYmSC1dYH1CBu2PjBB5Vi5ff6OJyD9x"
+        #secure: HQnPf+sjQoizngxyZCtL0Ei74MF6BnkCN1xkWozOyZve1Z0o+hVsJD3JF1ALC7O0A0couXElWej29CJyeaUCnRZu4X3Xm1hMowAtt/E5nFSNdn3LlUPqUrUzvap22H/uJM4Vi5qwjn6InGEAO5L6hXO1une19mgV7LoYG49DvNYYPxLAJ11Syg8kNznGekKn7nimsCM7f5HzKVx3HZyUCFFzdqvl5IHzjvv6mdvrRNgPCO3jMhKTxaLhvvCQKG/EHGyQT+UY0WFZO5D1oCWD7PGv6fXUDSQZNjj6cL6vU+xSPfZCxj3ZL6jvYx1cDU6wSSb9Q6ad7tJYutMDb18aEw==  #MONGO_API_URL
 
-# TEST AWS cluster
-  - name: env-test-aws
-    type: cluster
-    integration: avi-ecs
-    pointer:
-      sourceName : "test-aws"
-      region: "us-east-1"
-
+## TEST AWS cluster
+#  - name: env-test-aws
+#    type: cluster
+#    integration: avi-ecs
+#    pointer:
+#      sourceName : "test-aws"
+#      region: "us-east-1"
+#
 ## BOX PIPELINE CODE
 #
 ## REPO of BOX code
