@@ -8,7 +8,7 @@ jobs:
       - TASK:
         - script: sudo apt-get install -y jq
         - script: ls -al ./IN
-        - script: ls -al ./IN/aws-demo-pem
+        - script: cat ./IN/aws-demo-pem/integration.env
     on_success:
       - script: echo 'on success !!!!!'
     on_failure:
