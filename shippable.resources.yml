@@ -1,5 +1,5 @@
 resources:
-# VISUALIZER PIPELINE CODE
+# DEPLOY INFRA CODE
 
 # PEM key for AWS demo account
   - name: aws-demo-pem
@@ -13,6 +13,8 @@ resources:
     pointer:
       sourceName: "avinci/demoInfra"
       branch: master
+
+# VISUALIZER PIPELINE CODE
 
 ## REPO of VISUALIZER
 #  - name: dv-repo
