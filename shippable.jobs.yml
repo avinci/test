@@ -48,44 +48,44 @@ jobs:
       - TASK: managed
 
 
-## BOX PIPELINE JOBS
-#
-## CI for BOX
-#  - name: box-ci
-#    type: runSh
-#    steps:
-#      - IN: box-repo
-#      - IN: docker-creds
-#      - TASK:
-#        - script: sudo apt-get install -y jq
-#        - script: ./IN/box-repo/gitRepo/build.sh
-#      - OUT: box-img
-#    on_success:
-#      - script: echo 'on success !!!!!'
-#    on_failure:
-#      - script: echo 'Failed job .... :('
-#
-## manifest gen for BOX
-#  - name: box-man
-#    type: manifest
-#    steps:
-#      - IN: box-img
-#      - IN: box-img-opts
-#
-## TEST deployment for BOX
-#  - name: box-test-aws
-#    type: deploy
-#    steps:
-#      - IN: box-man
-#      - IN: box-t-params
-#      - IN: env-test-aws
-#
-#  - name: box-rel
-#    type: release
-#    steps:
-#      - IN: box-ver
-#      - IN: box-test-aws
-#        trigger: false
-#      - TASK: managed
-#        bump: minor
-#
+# BOX PIPELINE JOBS
+
+# CI for BOX
+  - name: box-ci
+    type: runSh
+    steps:
+      - IN: box-repo
+      - IN: docker-creds
+      - TASK:
+        - script: sudo apt-get install -y jq
+        - script: ./IN/box-repo/gitRepo/build.sh
+      - OUT: box-img
+    on_success:
+      - script: echo 'on success !!!!!'
+    on_failure:
+      - script: echo 'Failed job .... :('
+
+# manifest gen for BOX
+  - name: box-man
+    type: manifest
+    steps:
+      - IN: box-img
+      - IN: box-img-opts
+
+# TEST deployment for BOX
+  - name: box-test-aws
+    type: deploy
+    steps:
+      - IN: box-man
+      - IN: box-t-params
+      - IN: env-test-aws
+
+  - name: box-rel
+    type: release
+    steps:
+      - IN: box-ver
+      - IN: box-test-aws
+        trigger: false
+      - TASK: managed
+        bump: minor
+
