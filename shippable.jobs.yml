@@ -5,11 +5,12 @@ jobs:
   - name: infra-prov
     type: runSh
     steps:
-      - IN: aws-demo-pem
+      #- IN: aws-demo-pem
+      - IN: demo-infra-repo
       - TASK:
         - script: sudo apt-get install -y jq
         - script: ls -al ./IN
-        - script: ls -al ./aws-demo-pem
+        #- script: ls -al ./aws-demo-pem
     on_success:
       - script: echo 'on success !!!!!'
     on_failure:

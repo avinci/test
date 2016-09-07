@@ -6,6 +6,13 @@ resources:
     type: integration
     integration: avi-demo-pem
 
+# REPO of AWS demo Infra
+  - name: demo-infra-repo
+    type: gitRepo
+    integration: "avinci-gh"
+    pointer:
+      sourceName: "avinci/demoInfra"
+      branch: master
 
 ## REPO of VISUALIZER
 #  - name: dv-repo
