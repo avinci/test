@@ -96,8 +96,9 @@ resources:
         DB_NAME: "ayeaye"
         DB_PORT: "15700"
         DB_USERNAME: "ayeaye"
+        DB_PASSWORD: "ayeaye"
         ENVIRONMENT: "test-aws"
-        secure: UZtHnLlUEMQw4qJdFu5f9D0TaYv1pYT1aMjeph8CqQh4WOHO2diF72ZNzR3pTs73hW5KRsMTas1Cwkkgv6HGY9fCgFPApzxyXQ0GlBH9EkitcdhtAs993K/OF/wDMSUfqdTHkGIlGuXexEu35rNnk76xLIuymdxhajD/7Jda6tQJRYD+cSlfdiO0HzTWO/M/z0PZTioACzAicTWhbhzHm3Td+ApbP6R9J4Sz6izi66vhjUSm887XjWImr1LHEPzHxTJbTxPSAmysoP5AO9U/pzu2izI33SBTq64An+eCVmSe5F5EKa2UPr1M/HNN+j8KX1/6hCYLwmg9Zw5doOf0FA== #DB_PASSWORD
+        #secure: UZtHnLlUEMQw4qJdFu5f9D0TaYv1pYT1aMjeph8CqQh4WOHO2diF72ZNzR3pTs73hW5KRsMTas1Cwkkgv6HGY9fCgFPApzxyXQ0GlBH9EkitcdhtAs993K/OF/wDMSUfqdTHkGIlGuXexEu35rNnk76xLIuymdxhajD/7Jda6tQJRYD+cSlfdiO0HzTWO/M/z0PZTioACzAicTWhbhzHm3Td+ApbP6R9J4Sz6izi66vhjUSm887XjWImr1LHEPzHxTJbTxPSAmysoP5AO9U/pzu2izI33SBTq64An+eCVmSe5F5EKa2UPr1M/HNN+j8KX1/6hCYLwmg9Zw5doOf0FA== #DB_PASSWORD
 
 # Docker Image Options for BOX
   - name: box-img-opts
