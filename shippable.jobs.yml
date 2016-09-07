@@ -87,6 +87,6 @@ jobs:
       - IN: box-ver
       - IN: trigger-release
       - IN: box-test-aws
-        trigger: false
+        switch: off
       - TASK: managed
         bump: minor
