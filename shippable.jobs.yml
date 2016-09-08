@@ -40,13 +40,13 @@ jobs:
       - IN: dv-img-opts
 
 # TEST deployment for VISUALIZER
-  - name: dv-test
-    type: deploy
-    steps:
-      - IN: dv-man
-      - IN: dv-params
-      - IN: env-test-aws
-      - TASK: managed
+#  - name: dv-test
+#    type: deploy
+#    steps:
+#      - IN: dv-man
+#      - IN: dv-params
+#      - IN: env-test-aws
+#      - TASK: managed
 
 #
 ## BOX PIPELINE JOBS
