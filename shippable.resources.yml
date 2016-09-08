@@ -1,24 +1,24 @@
 resources:
 ## DEPLOY INFRA CODE
-#
-## PEM key for AWS demo account
-#  - name: aws-demo-pem
-#    type: integration
-#    integration: avi-demo-pem
-#
-## CREDS for AWS demo account
-#  - name: aws-demo-creds
-#    type: integration
-#    integration: avi-ecs
-#
-## REPO of AWS demo Infra
-#  - name: demo-infra-repo
-#    type: gitRepo
-#    integration: "avinci-gh"
-#    pointer:
-#      sourceName: "avinci/demoInfra"
-#      branch: master
-#
+
+# PEM key for AWS demo account
+  - name: aws-demo-pem
+    type: integration
+    integration: avi-demo-pem
+
+# CREDS for AWS demo account
+  - name: aws-demo-creds
+    type: integration
+    integration: avi-ecs
+
+# REPO of AWS demo Infra
+  - name: demo-infra-repo
+    type: gitRepo
+    integration: "avinci-gh"
+    pointer:
+      sourceName: "avinci/demoInfra"
+      branch: master
+
 ## VISUALIZER PIPELINE CODE
 #
 ## CREDS for DOCKER HUB
