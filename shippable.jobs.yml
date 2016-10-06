@@ -13,9 +13,9 @@ jobs:
     on_success:
       - script: pwd
       - script: ls -al
-      - script: build/IN/demo-infra-repo/gitRepo/archiveState.sh
+      - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
     on_failure:
-      - script: build/IN/demo-infra-repo/gitRepo/archiveState.sh
+      - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
 
 
 
