@@ -1,19 +1,18 @@
 jobs:
 ########################## DEPLOY AWS INFRA #########################
-  - name: infra-prov
-    type: runSh
-    steps:
-      - IN: trigger-demoInfra-prov
-      - IN: aws-demo-pem
-      - IN: aws-demo-creds
-      - IN: demo-infra-repo
-      - TASK:
-        - script: sudo apt-get install -y jq
-        - script: IN/demo-infra-repo/gitRepo/build.sh
-    on_success:
-      - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
-    on_failure:
-      - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
+#  - name: infra-prov
+#    type: runSh
+#    steps:
+#      - IN: aws-demo-pem
+#      - IN: aws-demo-creds
+#      - IN: demo-infra-repo
+#      - TASK:
+#        - script: sudo apt-get install -y jq
+#        - script: IN/demo-infra-repo/gitRepo/build.sh
+#    on_success:
+#      - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
+#    on_failure:
+#      - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
 
 
 

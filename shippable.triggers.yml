@@ -1,8 +1,4 @@
 triggers:
- - name: trigger-demoInfra-prov
-   type: trigger
-   version:
-     counter: 3
 
 # - name: trigger-release
 #   type: trigger
