@@ -11,8 +11,6 @@ jobs:
         - script: sudo apt-get install -y jq
         #- script: IN/demo-infra-repo/gitRepo/build.sh
     on_success:
-      - script: pwd
-      - script: ls -al
       - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
     on_failure:
       - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
