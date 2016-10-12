@@ -1,6 +1,6 @@
 triggers:
-
- - name: trigger-release
-   type: trigger
-   version:
-     counter: 3
+#
+# - name: trigger-release
+#   type: trigger
+#   version:
+#     counter: 3
