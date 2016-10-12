@@ -92,6 +92,7 @@ jobs:
       - TASK:
         - script: sudo apt-get install -y jq
         - script: ./IN/box-repo/gitRepo/test.sh
+        - script: touch /build/state/success.txt
     on_success:
       - script: echo 'on success !!!!!'
     on_failure:
