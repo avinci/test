@@ -53,48 +53,48 @@ jobs:
 
 
 ######################### BOX PIPELINE JOBS #########################
-# CI for BOX
-  - name: box-ci
-    type: runSh
-    steps:
-      - IN: box-repo
-      - IN: docker-creds
-      - TASK:
-        - script: sudo apt-get install -y jq
-        - script: ./IN/box-repo/gitRepo/build.sh
-      - OUT: box-img
-    on_success:
-      - script: echo 'on success !!!!!'
-    on_failure:
-      - script: echo 'Failed job .... :('
-
-# manifest gen for BOX
-  - name: box-man
-    type: manifest
-    steps:
-      - IN: box-img
-      - IN: box-img-opts
-
-# TEST deployment for BOX
-  - name: box-test-aws
-    type: deploy
-    steps:
-      - IN: box-man
-      - IN: box-t-params
-      - IN: env-test-aws
-
-  - name: box-e2e-test
-    type: runSh
-    steps:
-      - IN: box-repo
-        switch: off
-      - IN: box-test-aws
-      - TASK:
-        - script: sudo apt-get install -y jq
-        - script: ./IN/box-repo/gitRepo/test.sh
-        - script: touch /build/state/success.txt
-    on_success:
-      - script: echo 'on success !!!!!'
-    on_failure:
-      - script: echo 'Failed job .... :('
-
+## CI for BOX
+#  - name: box-ci
+#    type: runSh
+#    steps:
+#      - IN: box-repo
+#      - IN: docker-creds
+#      - TASK:
+#        - script: sudo apt-get install -y jq
+#        - script: ./IN/box-repo/gitRepo/build.sh
+#      - OUT: box-img
+#    on_success:
+#      - script: echo 'on success !!!!!'
+#    on_failure:
+#      - script: echo 'Failed job .... :('
+#
+## manifest gen for BOX
+#  - name: box-man
+#    type: manifest
+#    steps:
+#      - IN: box-img
+#      - IN: box-img-opts
+#
+## TEST deployment for BOX
+#  - name: box-test-aws
+#    type: deploy
+#    steps:
+#      - IN: box-man
+#      - IN: box-t-params
+#      - IN: env-test-aws
+#
+#  - name: box-e2e-test
+#    type: runSh
+#    steps:
+#      - IN: box-repo
+#        switch: off
+#      - IN: box-test-aws
+#      - TASK:
+#        - script: sudo apt-get install -y jq
+#        - script: ./IN/box-repo/gitRepo/test.sh
+#        - script: touch /build/state/success.txt
+#    on_success:
+#      - script: echo 'on success !!!!!'
+#    on_failure:
+#      - script: echo 'Failed job .... :('
+#
