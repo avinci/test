@@ -18,7 +18,12 @@ resources:
       sourceName: "avinci/demoInfra"
       branch: master
 
-
+# env vars for Infra action
+  - name: infra-params
+    type: params
+    version:
+      params:
+        INFRA_ACTION: "destroy"
 
 
 ########################## VISUALIZER PIPELINE CODE #########################

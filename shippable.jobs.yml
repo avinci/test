@@ -6,6 +6,7 @@ jobs:
       - IN: aws-demo-pem
       - IN: aws-demo-creds
       - IN: demo-infra-repo
+      - IN: infra-params
       - TASK:
         - script: sudo apt-get install -y jq
         - script: IN/demo-infra-repo/gitRepo/build.sh
