@@ -21,7 +21,7 @@ jobs:
     type: runSh
     steps:
       - IN: aws-demo-creds
-      - IN: demo-buildami-repo
+      - IN: demo-bldami-repo
       - TASK:
         - script: sudo apt-get install -y jq
         - script: IN/demo-buildami-repo/gitRepo/pack.sh
