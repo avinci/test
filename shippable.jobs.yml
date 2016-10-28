@@ -16,7 +16,19 @@ jobs:
       - script: /build/IN/demo-infra-repo/gitRepo/archiveState.sh
 
 
-
+########################## DEPLOY AWS INFRA #########################
+  - name: build-ami
+    type: runSh
+    steps:
+      - IN: aws-demo-creds
+      - IN: demo-buildami-repo
+      - TASK:
+        - script: sudo apt-get install -y jq
+        - script: IN/demo-buildami-repo/gitRepo/pack.sh
+    on_success:
+      - script: echo "SUCCESS"
+    on_failure:
+      - script: echo "FAILURE"
 
 ########################## VISUALIZER PIPELINE JOBS #########################
 ## CI for VISUALIZER

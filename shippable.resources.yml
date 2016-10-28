@@ -25,6 +25,15 @@ resources:
       params:
         INFRA_ACTION: "destroy"
 
+########################### BUILD AMI CODE #########################
+# REPO of AWS demo Infra
+  - name: demo-bldami-repo
+    type: gitRepo
+    integration: "avinci-gh"
+    pointer:
+      sourceName: "avinci/demoBuildAMI"
+      branch: master
+
 
 ########################## VISUALIZER PIPELINE CODE #########################
 ## CREDS for DOCKER HUB
