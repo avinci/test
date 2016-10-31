@@ -20,6 +20,7 @@ jobs:
   - name: build-ami
     type: runSh
     steps:
+      - IN: trig-img
       - IN: aws-demo-creds
       - IN: demo-bldami-repo
       - TASK:
