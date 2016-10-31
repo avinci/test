@@ -8,6 +8,7 @@ jobs:
       - IN: demo-infra-repo
       - IN: build-ami
       - IN: infra-params
+        switch: off
       - TASK:
         - script: sudo apt-get install -y jq
         - script: IN/demo-infra-repo/gitRepo/build.sh
