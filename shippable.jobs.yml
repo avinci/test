@@ -7,7 +7,7 @@ jobs:
       - IN: aws-demo-creds
       - IN: demo-infra-repo
       - IN: build-ami
-#        switch: off
+        switch: off
       - IN: infra-params
       - TASK:
         - script: sudo apt-get install -y jq
