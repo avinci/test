@@ -26,22 +26,22 @@ resources:
         INFRA_ACTION: "destroy"
 
 ########################### BUILD AMI CODE #########################
-## Trigger Image
-#  - name: trig-img
-#    type: image
-#    integration: avinci-dh
-#    pointer:
-#      sourceName: "avinci/dv"
-#    seed:
-#      versionName: "master.7"
-#
-## REPO of AWS demo Infra
-#  - name: demo-bldami-repo
-#    type: gitRepo
-#    integration: "avinci-gh"
-#    pointer:
-#      sourceName: "avinci/demoBuildAMI"
-#      branch: master
+# Trigger Image
+  - name: trig-img
+    type: image
+    integration: avinci-dh
+    pointer:
+      sourceName: "avinci/dv"
+    seed:
+      versionName: "master.7"
+
+# REPO of AWS demo Infra
+  - name: demo-bldami-repo
+    type: gitRepo
+    integration: "avinci-gh"
+    pointer:
+      sourceName: "avinci/demoBuildAMI"
+      branch: master
 
 
 ########################## VISUALIZER PIPELINE CODE #########################
@@ -83,7 +83,7 @@ resources:
 #      params:
 #        secure: Cjlw/VotAfTPrvRuw9wpDGuKG7Xa2d5YTUuzrRlKeg5/sJKxSJmPN9rkxUjKTeiT3XG7iii/N0QdqXpe9006OJSppIzWPvdUo5a2MLpdAqylp3pVRugX6Wp4EaYGnFHPtOiQkceDfsqX3oroYUKmM8QYqP/oRgUfPTfhULeB85QZGWrIKvXrDj2DP/H7Zc9p741R5RqmuHXNvc0xFIjEzK3v8xgMSBxfO1CSqtkTbUdsa43a04KGc0cDaW8Rha9GLidz/46IymrkT33cEh93YhLFZGO+SXsdm24aM89zBYVqYelC1FU3lwV40A4aYtWb4BGGuA9pntCx4aDqBKalQg== #MONGO_API_URL
 #
-## TEST AWS cluster
+# TEST AWS cluster
 #  - name: env-test-aws
 #    type: cluster
 #    integration: avi-ecs
