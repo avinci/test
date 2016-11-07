@@ -26,22 +26,22 @@ resources:
         INFRA_ACTION: "destroy"
 
 ########################### BUILD AMI CODE #########################
-# Trigger Image
-  - name: trig-img
-    type: image
-    integration: avinci-dh
-    pointer:
-      sourceName: "avinci/dv"
-    seed:
-      versionName: "master.7"
-
-# REPO of AWS demo Infra
-  - name: demo-bldami-repo
-    type: gitRepo
-    integration: "avinci-gh"
-    pointer:
-      sourceName: "avinci/demoBuildAMI"
-      branch: master
+## Trigger Image
+#  - name: trig-img
+#    type: image
+#    integration: avinci-dh
+#    pointer:
+#      sourceName: "avinci/dv"
+#    seed:
+#      versionName: "master.7"
+#
+## REPO of AWS demo Infra
+#  - name: demo-bldami-repo
+#    type: gitRepo
+#    integration: "avinci-gh"
+#    pointer:
+#      sourceName: "avinci/demoBuildAMI"
+#      branch: master
 
 
 ########################## VISUALIZER PIPELINE CODE #########################

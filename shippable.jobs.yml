@@ -6,8 +6,8 @@ jobs:
       - IN: aws-demo-pem
       - IN: aws-demo-creds
       - IN: demo-infra-repo
-      - IN: build-ami
-        switch: off
+#      - IN: build-ami
+#        switch: off
       - IN: infra-params
       - TASK:
         - script: sudo apt-get install -y jq
@@ -19,19 +19,19 @@ jobs:
 
 
 ########################## DEPLOY AWS INFRA #########################
-  - name: build-ami
-    type: runSh
-    steps:
-      - IN: trig-img
-      - IN: aws-demo-creds
-      - IN: demo-bldami-repo
-      - TASK:
-        - script: sudo apt-get install -y jq
-        - script: IN/demo-bldami-repo/gitRepo/pack.sh
-    on_success:
-      - script: echo "SUCCESS"
-    on_failure:
-      - script: echo "FAILURE"
+#  - name: build-ami
+#    type: runSh
+#    steps:
+#      - IN: trig-img
+#      - IN: aws-demo-creds
+#      - IN: demo-bldami-repo
+#      - TASK:
+#        - script: sudo apt-get install -y jq
+#        - script: IN/demo-bldami-repo/gitRepo/pack.sh
+#    on_success:
+#      - script: echo "SUCCESS"
+#    on_failure:
+#      - script: echo "FAILURE"
 
 ########################## VISUALIZER PIPELINE JOBS #########################
 ## CI for VISUALIZER
