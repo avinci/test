@@ -91,7 +91,7 @@ jobs:
       - IN: box-img
       - IN: box-img-opts
 
- TEST deployment for BOX
+# TEST deployment for BOX
   - name: box-test-aws
     type: deploy
     steps:
