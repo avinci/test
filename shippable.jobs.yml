@@ -6,7 +6,7 @@ jobs:
       - IN: aws-demo-pem
       - IN: aws-demo-creds
       - IN: demo-infra-repo
-#      - IN: build-ami
+      - IN: build-ami
 #        switch: off
       - IN: infra-params
       - TASK:
